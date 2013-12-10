@@ -1,49 +1,34 @@
 $(document).ready(function()
 {
 			
-		function max(firstNumber,secondNumber,thirdNumber)
+	function max(firstNumber,secondNumber,thirdNumber){
 			
-			{
+		if(firstNumber>secondNumber && firstNumber>thirdNumber)
+		{
+			
+			return firstNumber;
+			
+		}
 
-				var firstNumber=$("#firstNum").val();
-				var secondNumber=$("#secondNum").val();
-				var thirdNumber=$("#thirdNum").val();			
-				parseInt(firstNumber);
-				parseInt(secondNumber);
-				parseInt(thirdNumber);
-				var greatest =" ";
-
-				if(firstNumber>secondNumber && firstNumber>thirdNumber)
-				{
-					
-					greatest=firstNumber;
-					
-				}
-
-				else if(secondNumber>firstNumber && secondNumber>thirdNumber)
-				{
-						
-					greatest=secondNumber;
-					
-				}
-
-				else
-				{
-					
-					greatest=greatest + thirdNumber;
-	
-				}
-
-				$('#greatest').html(greatest);
-
+		else if(secondNumber>firstNumber && secondNumber>thirdNumber){
 				
+			return secondNumber;
+		}
 
-			}
+		else{
+			
+			return thirdNumber;
+		}
+
+	}
 
 
-	$("#submitBut").click(max);
+	$("#submitBut").click(function(){
+		var total = max($("#firstNum").val(),$("#secondNum").val(),$("#thirdNum").val());
+		$('#greatest').html(total);
+	});
 
-
+		
 
 });
 

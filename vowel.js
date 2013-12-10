@@ -1,13 +1,9 @@
 $(document).ready(function()
 {
 
-	function vowel()
-	{
-		var input = $("#char").val();
-		var res = " ";
+	function vowel(letter){
 		
-		switch(input)
-		{
+		switch(letter){
 			case 'a':
 			case 'e':
 			case 'i':
@@ -18,18 +14,24 @@ $(document).ready(function()
 			case 'I':
 			case 'O':
 			case 'U':
-			res = "The character entered is vowel";
+			
+			return "The character entered is vowel";
 			break;
 			
 			default:
 
-			res = "The character entered is consonant";
+			return "The character entered is consonant";
 			break;
 		}
 
-		$("#result").html(res);
-		}
+		
+	}
 
-$("#subBut").click(vowel);
+	$("#subBut").click(function(){
+
+	var result = vowel($("#char").val());
+	$("#result").html(result);
+
+	});
 
 });

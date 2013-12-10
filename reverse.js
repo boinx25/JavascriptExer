@@ -1,16 +1,19 @@
-$(document).ready(function()
-{
+$(document).ready(function(){
 
-	function reverse()
-	{
+	function reverse(word){
 
-		var str = $("#str").val();
-		var reversed= str.split("").reverse().join("");
+		var nareverse = word.split("").reverse().join("");
 
-		$("#result").html("This is the reversed format:" + "\xa0" + reversed);
+		return "This is the reversed format:" + "\xa0" + nareverse;
 
 	}
 
-	$("#subButton").click(reverse);
+	$("#subButton").click(function(){
+
+	    var reversed = reverse($("#str").val());
+	    $("#result").html(reversed);
+
+
+	});
 
 });

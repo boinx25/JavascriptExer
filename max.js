@@ -1,36 +1,27 @@
 $(document).ready(function()
 {
 			
-		function max(firstNumber,secondNumber)
-			
-			{
+		function max(firstNumber,secondNumber){
 
-				var firstNumber=$("#firstNum").val();
-				var secondNumber=$("#secondNum").val();			
-				parseInt(firstNumber);
-				parseInt(secondNumber);
-				var greatest = " ";
-
-				if(firstNumber>secondNumber)
-				{
+				if(firstNumber>secondNumber){
 				
-					greatest=firstNumber;
-					
+					return firstNumber;
 				}
 
-				else 
-				{
+				else{
 					
-					greatest=secondNumber;
-					
+					return secondNumber;
 				}
 
-				$('#greater').html(greatest);
-
-			}
+		}
 
 
-	$("#submitBut").click(max);
+	$("#submitBut").click(function(){
+
+		var result = max($("#firstNum").val(),$("#secondNum").val());
+		$("#greater").html(result);
+
+	});
 
 
 

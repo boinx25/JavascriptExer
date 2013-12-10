@@ -2,6 +2,7 @@ $(document).ready(function()
 {
 	var array = [1,2,3,4];
 	$("#numbers").html("The Numbers are:" + "\xa0" + array);
+	
 	function add()
 	{
 		var Sum= array.reduce(function (a,b)
