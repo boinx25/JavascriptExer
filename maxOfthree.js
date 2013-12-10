@@ -20,7 +20,7 @@ $(document).ready(function()
 					
 				}
 
-				if(secondNumber>firstNumber && secondNumber>thirdNumber)
+				else if(secondNumber>firstNumber && secondNumber>thirdNumber)
 				{
 						
 					greatest=secondNumber;
@@ -30,7 +30,7 @@ $(document).ready(function()
 				else
 				{
 					
-					greatest=thirdNumber;
+					greatest=greatest + thirdNumber;
 	
 				}
 
