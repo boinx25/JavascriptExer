@@ -7,7 +7,7 @@ $(document).ready(function()
 		var str = $("#str").val();
 		var reversed= str.split("").reverse().join("");
 
-		$("#result").html("This is the reversed format:" + /w reversed);
+		$("#result").html("This is the reversed format:" + "\xa0" + reversed);
 
 	}
 

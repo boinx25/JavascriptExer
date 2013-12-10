@@ -1,49 +1,33 @@
 $(document).ready(function()
 {
-
+	var array = [1,2,3,4];
+	$("#numbers").html("The Numbers are:" + "\xa0" + array);
 	function add()
 	{
-	 var a = $("#firstNum").val();
-	 var b = $("#secondNum").val();
-	 var c = $("#thirdNum").val();
-	 var d = $("#fourthNum").val();
-	 var array= new Array([a,b,c,d]);
-	 var total= " ";
-	 $.map(array, function(val,i) 
-	 		{ 
-     			return parseInt(val); 
-    	    });
- 	
-  		for (var i = 0; i < array.length; i++) 
-  			{
-    			total += array[i];
-  					$("#result").html(total);	
-  			}
- 
-  
-}
+		var Sum= array.reduce(function (a,b)
+		{
+			return a+b;
+		});
+	
+	$("#resultSum").html("The Sum is:" + "\xa0" + Sum);
+	
+	}
 	 
-
 	
-	
-
-	 function multiply()
-	 {
-
- 	 var a = $("#firstNum").val();
-	 var b = $("#secondNum").val();
-	 var c = $("#thirdNum").val();
-	 var d = $("#fourthNum").val();
-	 var array= [a,b,c,d];
-	 var total= " ";
+    function multiply()
+	{
 	 
-    		total*=array;
-	 		$("#result").html(total);
-
-	 }
+	 	var Quotient= array.reduce(function (a,b)
+		{
+			return a*b;
+		});
+	 
+    $("#resultQuotient").html("The Quotient is:" + "\xa0" + Quotient);
+	
+	}
 	
 	
-$("#add").click(add);
-$("#multiply").click(multiply);
+$("#sum").click(add);
+$("#quo").click(multiply);
 
 });
