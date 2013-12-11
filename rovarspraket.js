@@ -13,7 +13,7 @@ $(document).ready(function(){
 			case 'I':
 			case 'O':
 			case 'U':
-			case " ";
+			case " ":
 			
 			return true;
 			break;
