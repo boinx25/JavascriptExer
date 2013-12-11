@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-			
+		var result = " ";	
 		function max(firstNumber,secondNumber){
 
 				if(firstNumber>secondNumber){
@@ -12,13 +12,13 @@ $(document).ready(function()
 					
 					return secondNumber;
 				}
-
 		}
 
 
 	$("#submitBut").click(function(){
 
 		var result = max($("#firstNum").val(),$("#secondNum").val());
+		parseInt(result);
 		$("#greater").html(result);
 
 	});
